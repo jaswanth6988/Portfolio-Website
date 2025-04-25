@@ -62,7 +62,7 @@ function Header() {
           </li>
   <li>
     <a
-      href="/resume.pdf"
+      href="https://drive.google.com/file/d/1KavT2GqBGe7aUJLxbyrOYBdJwIq2nywk/view?usp=sharing"
       target="_blank"
       rel="noopener noreferrer"
       className="hover:underline"
