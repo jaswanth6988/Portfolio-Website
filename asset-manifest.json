@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/Portfolio-Website/static/css/main.31dea087.css",
+    "main.js": "/Portfolio-Website/static/js/main.6769b991.js",
+    "static/media/project6.png": "/Portfolio-Website/static/media/project6.a73b8599531c26d77dd5.png",
+    "static/media/profile.png": "/Portfolio-Website/static/media/profile.bf58d587cb4812519a3e.png",
+    "static/media/cargo.png": "/Portfolio-Website/static/media/cargo.fdbbd083ae4bd8b36733.png",
+    "static/media/vim.png": "/Portfolio-Website/static/media/vim.68793709f02ff31caf3d.png",
+    "static/media/linux.png": "/Portfolio-Website/static/media/linux.3130952d5c33f6ecc2b1.png",
+    "static/media/logo.svg": "/Portfolio-Website/static/media/logo.c0c49eba749f4005c29d2a366ba85b94.svg",
+    "static/media/logo2.svg": "/Portfolio-Website/static/media/logo2.c0c49eba749f4005c29d2a366ba85b94.svg",
+    "static/media/java.png": "/Portfolio-Website/static/media/java.55366f0549a1b9da427c.png",
+    "static/media/pip.png": "/Portfolio-Website/static/media/pip.5c5faece07468686b1f1.png",
+    "static/media/rust.png": "/Portfolio-Website/static/media/rust.40c4221fc7befd72640e.png",
+    "static/media/cpp.png": "/Portfolio-Website/static/media/cpp.3dbe5857c4570df8e40e.png",
+    "static/media/ovpn.png": "/Portfolio-Website/static/media/ovpn.d9f4be0e7689f45f8675.png",
+    "static/media/mysql1.png": "/Portfolio-Website/static/media/mysql1.11ed6fe511ffc0229bfd.png",
+    "static/media/clan.png": "/Portfolio-Website/static/media/clan.5d8db8fd5b6576fc73f9.png",
+    "static/media/python.png": "/Portfolio-Website/static/media/python.1e00603dc5574b8043df.png",
+    "index.html": "/Portfolio-Website/index.html",
+    "main.31dea087.css.map": "/Portfolio-Website/static/css/main.31dea087.css.map",
+    "main.6769b991.js.map": "/Portfolio-Website/static/js/main.6769b991.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31dea087.css",
+    "static/js/main.6769b991.js"
+  ]
+}
