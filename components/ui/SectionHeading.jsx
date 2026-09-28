@@ -32,7 +32,7 @@ export default function SectionHeading({
           </span>
         </div>
       )}
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-blue-400">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-blue-400 pb-2 leading-tight">
         {title}
       </h2>
     </motion.div>
