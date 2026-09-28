@@ -62,11 +62,8 @@ export default function Footer() {
         </div>
 
         {/* Bottom: Copyright */}
-        <div className="mt-8 pt-8 border-t border-slate-200 dark:border-white/10 text-sm flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-8 pt-8 border-t border-slate-200 dark:border-white/10 text-sm flex flex-col items-center justify-center gap-4 text-center">
           <p>&copy; {currentYear} {personalDetails.firstName} {personalDetails.lastName}. All rights reserved.</p>
-          <p className="flex items-center gap-1">
-            Built with <Heart size={14} className="text-red-500 fill-red-500" /> by Jaswanth
-          </p>
         </div>
       </div>
     </footer>

@@ -17,18 +17,19 @@ export default function Certifications() {
     <section className="section-container">
       <SectionHeading subtitle="Credentials" title="Certifications" />
       
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
-        {certificates.map((cert, index) => {
-          const IconComponent = iconMap[cert.icon] || Award;
-          
-          return (
-            <ScrollReveal key={cert.id || index} delay={index * 0.1}>
-              <GlassCard className="h-full flex flex-col items-start p-6">
+      <div className="relative overflow-hidden w-full max-w-5xl mx-auto py-10 before:absolute before:inset-y-0 before:left-0 before:w-16 before:bg-gradient-to-r before:from-slate-50 dark:before:from-[#050505] before:to-transparent before:z-10 after:absolute after:inset-y-0 after:right-0 after:w-16 after:bg-gradient-to-l after:from-slate-50 dark:after:from-[#050505] after:to-transparent after:z-10">
+        <div className="flex animate-marquee gap-6 w-max hover:[animation-play-state:paused]">
+          {/* Double the list to create a seamless loop */}
+          {[...certificates, ...certificates].map((cert, index) => {
+            const IconComponent = iconMap[cert.icon] || Award;
+            
+            return (
+              <GlassCard key={`${cert.title}-${index}`} className="flex flex-col items-start p-6 w-[300px] shrink-0">
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/20 to-cyan-500/20 flex items-center justify-center mb-4">
                   <IconComponent className="text-purple-500 dark:text-purple-400" size={24} />
                 </div>
                 
-                <h3 className="font-semibold text-lg text-slate-900 dark:text-slate-100 mb-1">
+                <h3 className="font-semibold text-lg text-slate-900 dark:text-slate-100 mb-1 line-clamp-1">
                   {cert.title}
                 </h3>
                 
@@ -36,7 +37,7 @@ export default function Certifications() {
                   {cert.issuer}
                 </p>
                 
-                {cert.url && (
+                {cert.url && cert.url !== "#" && (
                   <a
                     href={cert.url}
                     target="_blank"
@@ -47,9 +48,9 @@ export default function Certifications() {
                   </a>
                 )}
               </GlassCard>
-            </ScrollReveal>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </section>
   );

@@ -32,6 +32,7 @@ module.exports = {
         'morph': 'morph 8s ease-in-out infinite',
         'slide-up': 'slideUp 0.5s ease-out',
         'fade-in': 'fadeIn 0.5s ease-out',
+        'marquee': 'marquee 25s linear infinite',
       },
       keyframes: {
         float: {
@@ -65,6 +66,10 @@ module.exports = {
         fadeIn: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
+        },
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-100%)' },
         },
       },
       backgroundSize: {

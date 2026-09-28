@@ -81,25 +81,7 @@ export default function Contact() {
                 </button>
               </div>
 
-              {/* Phone */}
-              <div className="flex items-center justify-between p-4 rounded-2xl bg-white/50 dark:bg-white/5 border border-slate-200 dark:border-white/10 backdrop-blur-sm">
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-cyan-100 dark:bg-cyan-500/20 flex items-center justify-center text-cyan-600 dark:text-cyan-400">
-                    <Phone size={18} />
-                  </div>
-                  <div>
-                    <p className="text-sm text-slate-500 dark:text-slate-400">Phone</p>
-                    <p className="font-medium text-slate-900 dark:text-slate-100">{contactDetails.phone}</p>
-                  </div>
-                </div>
-                <button 
-                  onClick={() => handleCopy(contactDetails.phone, 'phone')}
-                  className="p-2 text-slate-400 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
-                  title="Copy Phone"
-                >
-                  {copiedField === 'phone' ? <Check size={18} className="text-green-500" /> : <Copy size={18} />}
-                </button>
-              </div>
+
             </div>
 
             {/* Social Links */}

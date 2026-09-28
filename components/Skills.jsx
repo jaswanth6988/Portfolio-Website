@@ -1,13 +1,13 @@
 "use client";
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Code2, Layout, Server, Shield, Wrench } from 'lucide-react';
+import { Code2, Layout, Server, Shield, Wrench, Cloud } from 'lucide-react';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 import SectionHeading from '@/components/ui/SectionHeading';
 import GlassCard from '@/components/ui/GlassCard';
 import { skillCategories } from '@/lib/data';
 
-const iconMap = { Code2, Layout, Server, Shield, Wrench };
+const iconMap = { Code2, Layout, Server, Shield, Wrench, Cloud };
 
 export default function Skills() {
   const containerVariants = {
