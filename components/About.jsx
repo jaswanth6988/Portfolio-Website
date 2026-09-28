@@ -78,18 +78,6 @@ export default function About() {
                 </div>
                 <div className="text-sm text-slate-500 dark:text-slate-400 font-medium">Global Rank</div>
               </GlassCard>
-              <GlassCard className="text-center p-6 flex flex-col items-center justify-center">
-                <div className="text-3xl font-bold gradient-text mb-2">
-                  <AnimatedCounter value="3" suffix="+" />
-                </div>
-                <div className="text-sm text-slate-500 dark:text-slate-400 font-medium">Years Exp.</div>
-              </GlassCard>
-              <GlassCard className="text-center p-6 flex flex-col items-center justify-center">
-                <div className="text-3xl font-bold gradient-text mb-2">
-                  <AnimatedCounter value="15" suffix="+" />
-                </div>
-                <div className="text-sm text-slate-500 dark:text-slate-400 font-medium">Projects</div>
-              </GlassCard>
             </div>
           </ScrollReveal>
           
