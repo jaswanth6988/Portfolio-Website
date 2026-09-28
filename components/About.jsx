@@ -68,15 +68,15 @@ export default function About() {
             <div className="grid grid-cols-2 gap-4">
               <GlassCard className="text-center p-6 flex flex-col items-center justify-center">
                 <div className="text-3xl font-bold gradient-text mb-2">
-                  <AnimatedCounter value="300" suffix="+" />
+                  <AnimatedCounter value="1" suffix="+" />
                 </div>
-                <div className="text-sm text-slate-500 dark:text-slate-400 font-medium">Problems Solved</div>
+                <div className="text-sm text-slate-500 dark:text-slate-400 font-medium">Years Exp.</div>
               </GlassCard>
               <GlassCard className="text-center p-6 flex flex-col items-center justify-center">
                 <div className="text-3xl font-bold gradient-text mb-2">
-                  <AnimatedCounter value="Top 5%" />
+                  <AnimatedCounter value="6" suffix="+" />
                 </div>
-                <div className="text-sm text-slate-500 dark:text-slate-400 font-medium">Global Rank</div>
+                <div className="text-sm text-slate-500 dark:text-slate-400 font-medium">Projects</div>
               </GlassCard>
             </div>
           </ScrollReveal>
