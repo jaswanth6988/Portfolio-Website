@@ -35,7 +35,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section id="home" className="relative min-h-[100svh] flex items-center justify-center overflow-hidden pt-24 md:pt-0 pb-12 md:pb-0">
       <div className="absolute inset-0 aurora-bg opacity-30 dark:opacity-20 z-0"></div>
       <div className="absolute inset-0 grid-bg opacity-50 z-0"></div>
       
@@ -44,12 +44,12 @@ export default function Hero() {
       <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-500/20 rounded-full blur-[100px] animate-float-delayed z-0"></div>
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500/10 rounded-full blur-[120px] animate-float-slow z-0"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col-reverse lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full">
         <motion.div 
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="flex flex-col items-center lg:items-start text-center lg:text-left"
+          className="flex flex-col items-center lg:items-start text-center lg:text-left order-2 lg:order-1"
         >
           <motion.div variants={itemVariants} className="mb-6">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-indigo-500/30 bg-white/5 backdrop-blur-sm shadow-sm dark:shadow-none">
@@ -111,9 +111,9 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="hidden lg:flex justify-center items-center relative"
+          className="flex justify-center items-center relative order-1 lg:order-2 w-[240px] h-[240px] sm:w-[320px] sm:h-[320px] lg:w-[400px] lg:h-[400px] mx-auto"
         >
-          <div className="relative w-[400px] h-[400px] rounded-2xl p-1 bg-gradient-to-tr from-indigo-500 via-transparent to-blue-400 animate-morph glow-indigo">
+          <div className="relative w-full h-full rounded-2xl p-1 bg-gradient-to-tr from-indigo-500 via-transparent to-blue-400 animate-morph glow-indigo">
             <div className="w-full h-full rounded-[inherit] overflow-hidden bg-slate-100 dark:bg-[#0a0a0f] p-2">
               <div className="w-full h-full rounded-[inherit] overflow-hidden relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/20 to-blue-900/20 mix-blend-overlay z-10"></div>
