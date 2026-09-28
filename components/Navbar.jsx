@@ -69,7 +69,7 @@ export default function Navbar() {
             <span className="font-bold text-xl text-slate-900 dark:text-slate-100 transition-colors">
               {personalDetails.firstName || 'Portfolio'}
             </span>
-            <span className="w-2 h-2 rounded-full bg-gradient-to-r from-purple-500 to-cyan-400 group-hover:scale-125 transition-transform" />
+            <span className="w-2 h-2 rounded-full bg-gradient-to-r from-indigo-500 to-blue-400 group-hover:scale-125 transition-transform" />
           </a>
 
           {/* Desktop Nav */}
@@ -82,8 +82,8 @@ export default function Navbar() {
                     onClick={(e) => handleLinkClick(e, link.href)}
                     className={`text-sm font-medium transition-colors ${
                       activeSection === link.href.substring(1)
-                        ? 'text-purple-600 dark:text-purple-400'
-                        : 'text-slate-600 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400'
+                        ? 'text-indigo-600 dark:text-indigo-400'
+                        : 'text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400'
                     }`}
                   >
                     {link.label}
@@ -100,7 +100,7 @@ export default function Navbar() {
               <a
                 href={personalDetails.resumeUrl}
                 download
-                className="btn-primary px-5 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-400 text-white text-sm font-medium hover:opacity-90 transition-opacity shadow-lg shadow-purple-500/25"
+                className="btn-primary px-5 py-2 rounded-lg bg-gradient-to-r from-indigo-500 to-blue-400 text-white text-sm font-medium hover:opacity-90 transition-opacity shadow-lg shadow-indigo-500/25"
               >
                 Resume
               </a>
@@ -145,7 +145,7 @@ export default function Navbar() {
                       onClick={(e) => handleLinkClick(e, link.href)}
                       className={`text-2xl font-bold transition-colors ${
                         activeSection === link.href.substring(1)
-                          ? 'text-purple-600 dark:text-purple-400'
+                          ? 'text-indigo-600 dark:text-indigo-400'
                           : 'text-slate-800 dark:text-slate-200'
                       }`}
                     >
@@ -164,7 +164,7 @@ export default function Navbar() {
                     <a
                       href={personalDetails.resumeUrl}
                       download
-                      className="inline-block px-8 py-3 rounded-full bg-gradient-to-r from-purple-500 to-cyan-400 text-white text-lg font-medium shadow-lg shadow-purple-500/25"
+                      className="inline-block px-8 py-3 rounded-full bg-gradient-to-r from-indigo-500 to-blue-400 text-white text-lg font-medium shadow-lg shadow-indigo-500/25"
                     >
                       Download Resume
                     </a>

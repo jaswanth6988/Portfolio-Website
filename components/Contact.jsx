@@ -64,7 +64,7 @@ export default function Contact() {
               {/* Email */}
               <div className="flex items-center justify-between p-4 rounded-2xl bg-white/50 dark:bg-white/5 border border-slate-200 dark:border-white/10 backdrop-blur-sm">
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-500/20 flex items-center justify-center text-purple-600 dark:text-purple-400">
+                  <div className="w-10 h-10 rounded-full bg-indigo-100 dark:bg-indigo-500/20 flex items-center justify-center text-indigo-600 dark:text-indigo-400">
                     <Mail size={18} />
                   </div>
                   <div>
@@ -74,7 +74,7 @@ export default function Contact() {
                 </div>
                 <button 
                   onClick={() => handleCopy(contactDetails.email, 'email')}
-                  className="p-2 text-slate-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                  className="p-2 text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
                   title="Copy Email"
                 >
                   {copiedField === 'email' ? <Check size={18} className="text-green-500" /> : <Copy size={18} />}
@@ -96,7 +96,7 @@ export default function Contact() {
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-10 h-10 rounded-full bg-white/80 dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-purple-600 dark:hover:text-white hover:bg-purple-100 dark:hover:bg-purple-500/20 hover:border-purple-300 dark:hover:border-purple-500/30 transition-all duration-300 hover:scale-110"
+                      className="w-10 h-10 rounded-full bg-white/80 dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-white hover:bg-indigo-100 dark:hover:bg-indigo-500/20 hover:border-indigo-300 dark:hover:border-indigo-500/30 transition-all duration-300 hover:scale-110"
                       title={link.name}
                     >
                       <Icon size={18} />
@@ -135,7 +135,7 @@ export default function Contact() {
                     onChange={handleInputChange}
                     required
                     placeholder="John Doe"
-                    className="w-full bg-transparent border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-purple-500 dark:focus:border-purple-400 focus:ring-1 focus:ring-purple-500/20 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 transition"
+                    className="w-full bg-transparent border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-indigo-500 dark:focus:border-indigo-400 focus:ring-1 focus:ring-indigo-500/20 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 transition"
                   />
                 </div>
                 <div>
@@ -150,7 +150,7 @@ export default function Contact() {
                     onChange={handleInputChange}
                     required
                     placeholder="john@example.com"
-                    className="w-full bg-transparent border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-purple-500 dark:focus:border-purple-400 focus:ring-1 focus:ring-purple-500/20 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 transition"
+                    className="w-full bg-transparent border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-indigo-500 dark:focus:border-indigo-400 focus:ring-1 focus:ring-indigo-500/20 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 transition"
                   />
                 </div>
                 <div>
@@ -165,12 +165,12 @@ export default function Contact() {
                     required
                     rows={4}
                     placeholder="Tell me about your project..."
-                    className="w-full bg-transparent border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-purple-500 dark:focus:border-purple-400 focus:ring-1 focus:ring-purple-500/20 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 transition resize-none"
+                    className="w-full bg-transparent border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-indigo-500 dark:focus:border-indigo-400 focus:ring-1 focus:ring-indigo-500/20 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 transition resize-none"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full py-3 px-6 rounded-xl font-medium text-white bg-gradient-to-r from-purple-600 to-cyan-500 hover:from-purple-700 hover:to-cyan-600 focus:outline-none focus:ring-2 focus:ring-purple-500/50 transition-all flex items-center justify-center gap-2 group"
+                  className="w-full py-3 px-6 rounded-xl font-medium text-white bg-gradient-to-r from-indigo-600 to-blue-500 hover:from-indigo-700 hover:to-blue-600 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all flex items-center justify-center gap-2 group"
                 >
                   Send Message
                   <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />

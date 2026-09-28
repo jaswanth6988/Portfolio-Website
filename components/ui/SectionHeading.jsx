@@ -26,13 +26,13 @@ export default function SectionHeading({
     >
       {subtitle && (
         <div className="flex items-center gap-2 mb-3">
-          <span className="w-2 h-2 rounded-full bg-purple-500"></span>
-          <span className="uppercase tracking-widest text-sm text-purple-600 dark:text-purple-400 font-mono">
+          <span className="w-2 h-2 rounded-full bg-indigo-500"></span>
+          <span className="uppercase tracking-widest text-sm text-indigo-600 dark:text-indigo-400 font-mono">
             {subtitle}
           </span>
         </div>
       )}
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-cyan-400">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-blue-400">
         {title}
       </h2>
     </motion.div>

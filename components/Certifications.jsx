@@ -25,8 +25,8 @@ export default function Certifications() {
             
             return (
               <GlassCard key={`${cert.title}-${index}`} className="flex flex-col items-start p-6 w-[300px] shrink-0">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/20 to-cyan-500/20 flex items-center justify-center mb-4">
-                  <IconComponent className="text-purple-500 dark:text-purple-400" size={24} />
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500/20 to-blue-500/20 flex items-center justify-center mb-4">
+                  <IconComponent className="text-indigo-500 dark:text-indigo-400" size={24} />
                 </div>
                 
                 <h3 className="font-semibold text-lg text-slate-900 dark:text-slate-100 mb-1 line-clamp-1">
@@ -42,7 +42,7 @@ export default function Certifications() {
                     href={cert.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-sm font-medium text-purple-600 dark:text-purple-400 hover:underline mt-auto"
+                    className="inline-flex items-center gap-1.5 text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:underline mt-auto"
                   >
                     View Certificate <ExternalLink size={14} />
                   </a>

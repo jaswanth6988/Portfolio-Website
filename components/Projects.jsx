@@ -30,7 +30,7 @@ export default function Projects() {
             onClick={() => setActiveFilter(category)}
             className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
               activeFilter === category
-                ? 'bg-gradient-to-r from-purple-600 to-cyan-500 text-white'
+                ? 'bg-gradient-to-r from-indigo-600 to-blue-500 text-white'
                 : 'bg-white/80 dark:bg-white/5 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/10'
             }`}
           >
@@ -54,7 +54,7 @@ export default function Projects() {
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
                 key={project.id || index}
-                className={`rounded-2xl overflow-hidden group border border-slate-200 dark:border-white/5 hover:border-purple-300 dark:hover:border-purple-500/20 bg-white dark:bg-[#111116] flex flex-col ${
+                className={`rounded-2xl overflow-hidden group border border-slate-200 dark:border-white/5 hover:border-indigo-300 dark:hover:border-indigo-500/20 bg-white dark:bg-[#111116] flex flex-col ${
                   isFeatured ? 'lg:col-span-2' : ''
                 }`}
               >
@@ -100,7 +100,7 @@ export default function Projects() {
                 {/* Content Section */}
                 <div className="p-5 flex-1 flex flex-col">
                   <div className="mb-3">
-                    <span className="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-purple-100 dark:bg-purple-500/10 text-purple-700 dark:text-purple-300">
+                    <span className="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-indigo-100 dark:bg-indigo-500/10 text-indigo-700 dark:text-indigo-300">
                       {project.category}
                     </span>
                   </div>
@@ -114,7 +114,7 @@ export default function Projects() {
                     {project.techStack.map((tech, i) => (
                       <span
                         key={i}
-                        className="px-2 py-1 text-xs bg-purple-100 dark:bg-purple-500/10 text-purple-700 dark:text-purple-300 rounded-md font-mono"
+                        className="px-2 py-1 text-xs bg-indigo-100 dark:bg-indigo-500/10 text-indigo-700 dark:text-indigo-300 rounded-md font-mono"
                       >
                         {tech}
                       </span>

@@ -37,7 +37,7 @@ export default function Skills() {
             <ScrollReveal key={index} delay={index * 0.1}>
               <GlassCard className="h-full p-6 flex flex-col">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500/10 to-cyan-500/10 border border-purple-500/20 flex items-center justify-center text-cyan-500">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-indigo-500/10 to-blue-500/10 border border-indigo-500/20 flex items-center justify-center text-blue-500">
                     <Icon className="w-6 h-6" />
                   </div>
                   <h3 className="font-semibold text-lg text-slate-800 dark:text-slate-100">
@@ -57,7 +57,7 @@ export default function Skills() {
                       key={skillIdx}
                       variants={itemVariants}
                       whileHover={{ scale: 1.05, y: -2 }}
-                      className="skill-badge hover:border-cyan-400/50 hover:bg-cyan-400/10 transition-colors cursor-default"
+                      className="skill-badge hover:border-blue-400/50 hover:bg-blue-400/10 transition-colors cursor-default"
                     >
                       {skill}
                     </motion.span>

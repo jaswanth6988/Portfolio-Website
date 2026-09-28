@@ -92,15 +92,15 @@ export default function About() {
                       <a href={platform.url} target="_blank" rel="noopener noreferrer" className="block p-5 h-full">
                         <div className="flex justify-between items-start mb-4">
                           <div className="flex items-center gap-3">
-                            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500/20 to-cyan-500/20 flex items-center justify-center text-purple-500">
+                            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500/20 to-blue-500/20 flex items-center justify-center text-indigo-500">
                               <Icon className="w-5 h-5" />
                             </div>
                             <span className="font-semibold text-slate-800 dark:text-slate-200">{platform.name}</span>
                           </div>
-                          <ExternalLink className="w-4 h-4 text-slate-400 group-hover:text-purple-500 transition-colors" />
+                          <ExternalLink className="w-4 h-4 text-slate-400 group-hover:text-indigo-500 transition-colors" />
                         </div>
                         <div className="mb-2">
-                          <span className={`text-2xl font-bold ${platform.color ? platform.color : 'text-purple-500'}`}>
+                          <span className={`text-2xl font-bold ${platform.color ? platform.color : 'text-indigo-500'}`}>
                             {platform.stat}
                           </span>
                         </div>
