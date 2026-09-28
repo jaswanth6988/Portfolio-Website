@@ -74,7 +74,7 @@ export default function About() {
               </GlassCard>
               <GlassCard className="text-center p-6 flex flex-col items-center justify-center">
                 <div className="text-3xl font-bold gradient-text mb-2">
-                  <AnimatedCounter value="6" suffix="+" />
+                  <AnimatedCounter value="15" suffix="+" />
                 </div>
                 <div className="text-sm text-slate-500 dark:text-slate-400 font-medium">Projects</div>
               </GlassCard>
@@ -89,21 +89,21 @@ export default function About() {
                 return (
                   <ScrollReveal key={index} delay={0.3 + index * 0.1}>
                     <GlassCard className="relative overflow-hidden group hover:-translate-y-1 transition-transform">
-                      <a href={platform.url} target="_blank" rel="noopener noreferrer" className="block p-4">
-                        <div className="flex justify-between items-center mb-2">
-                          <div className="flex items-center gap-2">
-                            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-indigo-500/20 to-blue-500/20 flex items-center justify-center text-indigo-500 shrink-0">
-                              <Icon className="w-4 h-4" />
+                      <a href={platform.url} target="_blank" rel="noopener noreferrer" className="block p-3">
+                        <div className="flex justify-between items-center mb-1.5">
+                          <div className="flex items-center gap-1.5">
+                            <div className="w-6 h-6 rounded-full bg-gradient-to-br from-indigo-500/20 to-blue-500/20 flex items-center justify-center text-indigo-500 shrink-0">
+                              <Icon className="w-3 h-3" />
                             </div>
-                            <span className="font-medium text-sm text-slate-800 dark:text-slate-200">{platform.name}</span>
+                            <span className="font-medium text-xs text-slate-800 dark:text-slate-200">{platform.name}</span>
                           </div>
-                          <ExternalLink className="w-3.5 h-3.5 text-slate-400 group-hover:text-indigo-500 transition-colors shrink-0" />
+                          <ExternalLink className="w-3 h-3 text-slate-400 group-hover:text-indigo-500 transition-colors shrink-0" />
                         </div>
                         <div>
-                          <div className={`text-xl font-bold ${platform.color ? platform.color : 'text-indigo-500'}`}>
+                          <div className={`text-lg font-bold ${platform.color ? platform.color : 'text-indigo-500'}`}>
                             {platform.stat}
                           </div>
-                          <div className="text-xs font-medium text-slate-600 dark:text-slate-400">{platform.statLabel}</div>
+                          <div className="text-[11px] font-medium text-slate-600 dark:text-slate-400">{platform.statLabel}</div>
                         </div>
                       </a>
                     </GlassCard>
