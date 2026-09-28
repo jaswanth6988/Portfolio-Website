@@ -44,30 +44,30 @@ export default function Hero() {
       <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-500/20 rounded-full blur-[100px] animate-float-delayed z-0"></div>
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500/10 rounded-full blur-[120px] animate-float-slow z-0"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full pb-20 md:pb-0">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col lg:grid lg:grid-cols-2 gap-6 lg:gap-12 items-center w-full pb-16 md:pb-0">
         <motion.div 
           variants={containerVariants}
           initial="hidden"
           animate="visible"
           className="flex flex-col items-center lg:items-start text-center lg:text-left order-2 lg:order-1"
         >
-          <motion.div variants={itemVariants} className="mb-6">
+          <motion.div variants={itemVariants} className="mb-4 lg:mb-6">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-indigo-500/30 bg-white/5 backdrop-blur-sm shadow-sm dark:shadow-none">
               <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-              <span className="text-sm font-medium text-slate-700 dark:text-slate-300">Available for opportunities</span>
+              <span className="text-xs sm:text-sm font-medium text-slate-700 dark:text-slate-300">Available for opportunities</span>
             </div>
           </motion.div>
 
-          <motion.h2 variants={itemVariants} className="text-lg md:text-xl text-slate-600 dark:text-slate-400 font-medium mb-2">
+          <motion.h2 variants={itemVariants} className="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-400 font-medium mb-1 lg:mb-2">
             Hi, I'm
           </motion.h2>
 
-          <motion.h1 variants={itemVariants} className="text-5xl sm:text-6xl lg:text-7xl font-black mb-4 gradient-text tracking-tight">
+          <motion.h1 variants={itemVariants} className="text-4xl sm:text-5xl lg:text-7xl font-black mb-3 lg:mb-4 gradient-text tracking-tight">
             {personalDetails.name}
           </motion.h1>
 
-          <motion.div variants={itemVariants} className="h-10 mb-6 flex items-center">
-            <span className="font-mono text-lg sm:text-xl text-indigo-600 dark:text-indigo-400 flex items-center">
+          <motion.div variants={itemVariants} className="h-8 lg:h-10 mb-4 lg:mb-6 flex items-center">
+            <span className="font-mono text-base sm:text-lg lg:text-xl text-indigo-600 dark:text-indigo-400 flex items-center">
               {"> "}
               <motion.span
                 key={currentRoleIndex}
@@ -83,17 +83,17 @@ export default function Hero() {
             </span>
           </motion.div>
 
-          <motion.p variants={itemVariants} className="text-base sm:text-lg text-slate-600 dark:text-slate-400 max-w-lg mb-8 leading-relaxed">
+          <motion.p variants={itemVariants} className="text-sm sm:text-base lg:text-lg text-slate-600 dark:text-slate-400 max-w-lg mb-6 lg:mb-8 leading-relaxed">
             {personalDetails.about.split('.')[0]}.
           </motion.p>
 
-          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-3 lg:gap-4 w-full sm:w-auto">
             <button 
               onClick={() => scrollToSection('projects')}
               className="btn-primary group"
             >
               View My Work
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 h-4 lg:w-5 lg:h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </button>
             <a 
               href={personalDetails.resumeUrl || '#'}
@@ -102,7 +102,7 @@ export default function Hero() {
               className="btn-secondary group"
             >
               Download Resume
-              <Download className="w-5 h-5 ml-2 group-hover:-translate-y-1 transition-transform" />
+              <Download className="w-4 h-4 lg:w-5 lg:h-5 ml-2 group-hover:-translate-y-1 transition-transform" />
             </a>
           </motion.div>
         </motion.div>
@@ -111,10 +111,10 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="flex justify-center items-center relative order-1 lg:order-2 w-[240px] h-[240px] sm:w-[320px] sm:h-[320px] lg:w-[400px] lg:h-[400px] mx-auto"
+          className="flex justify-center items-center relative order-1 lg:order-2 w-[180px] h-[180px] sm:w-[260px] sm:h-[260px] lg:w-[400px] lg:h-[400px] mx-auto mt-4 lg:mt-0"
         >
           <div className="relative w-full h-full rounded-2xl p-1 bg-gradient-to-tr from-indigo-500 via-transparent to-blue-400 animate-morph glow-indigo">
-            <div className="w-full h-full rounded-[inherit] overflow-hidden bg-slate-100 dark:bg-[#0a0a0f] p-2">
+            <div className="w-full h-full rounded-[inherit] overflow-hidden bg-slate-100 dark:bg-[#0a0a0f] p-1.5 lg:p-2">
               <div className="w-full h-full rounded-[inherit] overflow-hidden relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/20 to-blue-900/20 mix-blend-overlay z-10"></div>
                 <img
@@ -132,7 +132,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1, duration: 0.8 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center cursor-pointer"
+        className="hidden md:flex absolute bottom-10 left-1/2 -translate-x-1/2 flex-col items-center cursor-pointer"
         onClick={() => scrollToSection('about')}
       >
         <span className="text-sm text-slate-500 dark:text-slate-400 mb-2 font-medium">Scroll to explore</span>
