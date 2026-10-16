@@ -65,11 +65,16 @@ export default function Navbar() {
       >
         <div className="container mx-auto px-6 max-w-7xl flex items-center justify-between">
           {/* Logo */}
-          <a href="#home" onClick={(e) => handleLinkClick(e, '#home')} className="flex items-center gap-1 group z-50">
-            <span className="font-bold text-xl text-slate-900 dark:text-slate-100 transition-colors">
+          <a href="#home" onClick={(e) => handleLinkClick(e, '#home')} className="flex items-center group z-50 select-none">
+            <span className="font-mono text-indigo-500 font-bold text-xl transition-transform group-hover:-translate-x-1">
+              &lt;
+            </span>
+            <span className="font-bold text-xl tracking-tight text-slate-900 dark:text-slate-100 mx-1 transition-colors">
               {personalDetails.firstName || 'Portfolio'}
             </span>
-            <span className="w-2 h-2 rounded-full bg-gradient-to-r from-indigo-500 to-blue-400 group-hover:scale-125 transition-transform" />
+            <span className="font-mono text-indigo-500 font-bold text-xl transition-transform group-hover:translate-x-1">
+              /&gt;
+            </span>
           </a>
 
           {/* Desktop Nav */}

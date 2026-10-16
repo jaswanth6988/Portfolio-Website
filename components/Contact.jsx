@@ -30,14 +30,30 @@ export default function Contact() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Simulate form submission
+    try {
+      await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+    } catch (err) {
+      console.error('Contact submit error:', err);
+    }
+
+    // Trigger user's mail client directly to ensure message reaches Jaswanth
+    const subject = encodeURIComponent(`Portfolio Message from ${formData.name}`);
+    const body = encodeURIComponent(
+      `Hi Jaswanth,\n\n${formData.message}\n\n---\nSender: ${formData.name}\nEmail: ${formData.email}`
+    );
+    window.location.href = `mailto:${contactDetails.email}?subject=${subject}&body=${body}`;
+
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
       setFormData({ name: '', email: '', message: '' });
-    }, 5000);
+    }, 6000);
   };
 
   return (
@@ -69,7 +85,12 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-sm text-slate-500 dark:text-slate-400">Email</p>
-                    <p className="font-medium text-slate-900 dark:text-slate-100">{contactDetails.email}</p>
+                    <a
+                      href={`mailto:${contactDetails.email}`}
+                      className="font-medium text-slate-900 dark:text-slate-100 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                    >
+                      {contactDetails.email}
+                    </a>
                   </div>
                 </div>
                 <button 
@@ -81,7 +102,32 @@ export default function Contact() {
                 </button>
               </div>
 
-
+              {/* Phone */}
+              {contactDetails.phone && (
+                <div className="flex items-center justify-between p-4 rounded-2xl bg-white/50 dark:bg-white/5 border border-slate-200 dark:border-white/10 backdrop-blur-sm">
+                  <div className="flex items-center gap-4">
+                    <div className="w-10 h-10 rounded-full bg-indigo-100 dark:bg-indigo-500/20 flex items-center justify-center text-indigo-600 dark:text-indigo-400">
+                      <Phone size={18} />
+                    </div>
+                    <div>
+                      <p className="text-sm text-slate-500 dark:text-slate-400">Phone / WhatsApp</p>
+                      <a
+                        href={`tel:${contactDetails.phone.replace(/\s+/g, '')}`}
+                        className="font-medium text-slate-900 dark:text-slate-100 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                      >
+                        {contactDetails.phone}
+                      </a>
+                    </div>
+                  </div>
+                  <button 
+                    onClick={() => handleCopy(contactDetails.phone, 'phone')}
+                    className="p-2 text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                    title="Copy Phone Number"
+                  >
+                    {copiedField === 'phone' ? <Check size={18} className="text-green-500" /> : <Copy size={18} />}
+                  </button>
+                </div>
+              )}
             </div>
 
             {/* Social Links */}
